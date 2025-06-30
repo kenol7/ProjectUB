@@ -1,38 +1,40 @@
-import React from 'react'
-import FormInput from '../../../../component/dashboard/formInput/formInput'
-import FormDesc from '../../../../component/dashboard/formInput/formDesc'
-import { Link } from 'react-router-dom'
+import React from "react";
+import FormInput from "../../../../component/dashboard/formInput/formInput";
+import FormDesc from "../../../../component/dashboard/formInput/formDesc";
+import { Link } from "react-router-dom";
 
 export default function Page_1() {
   return (
-    <div className='my-10'>
-      <div className='bg-white border-2 border-primary-300 py-14 px-12 rounded-2xl'>
-        <div className=''>
-            <div>
-                <FormInput 
-                    label="Tagline Program"
-                    name="tagline_program"
-                    value=""
-                    onChange=""
-                    placeholder="Digitalisasi Administrasi dan Pelayanan Akademik"
-                />
+    <div className="my-10">
+      <div className="">
+        <div className="">
+          <div>
+            <FormInput
+              label="Judul Program"
+              name="judul_program"
+              value=""
+              onChange=""
+              placeholder="Judul Program"
+            />
+          </div>
+          <div className="my-14">
+            <FormDesc
+              label="Deskripsi"
+              name="desc"
+              value=""
+              onChange=""
+              placeholder="Deskripsi"
+            />
+          </div>
+          <Link to="/dashboard/Add Program Kerja/Page 2">
+            <div className="text-end">
+              <button className="px-4 py-2 rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition">
+                Lanjut
+              </button>
             </div>
-            <div className='my-14'>
-                <FormDesc
-                    label="Deskripsi Program"
-                    name="desc"
-                    value=""
-                    onChange=""
-                    placeholder="Tuliskan deskripsi di sini..."
-                />
-            </div>
-            <Link to="/dashboard/Add Program Kerja/Page 2">
-                <div className='text-center'>
-                    <button className='xl:w-[778px] xl:h-[50px] md:w-full md:h-[50px] w-full h-[50px] rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition'>Lanjut</button>
-                </div>
-            </Link>
+          </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

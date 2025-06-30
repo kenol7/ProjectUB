@@ -8,17 +8,25 @@ import Ketpen from "./pages/about/rekamJejak/ketpen/index";
 import Dashboard from "./pages/dashboard";
 import PagesHome from "./pages/dashboard/pagesHome";
 import PagesWork from "./pages/dashboard/pagesWork";
+import PagesRekamJejak from "./pages/dashboard/pagesRekamJejak";
 import Digitalisasi from "./pages/programkerja/digitalisasi";
 import Internasionalisasi from "./pages/programkerja/internasionalisasi";
 import Penguatan from "./pages/programkerja/penguatan";
 import Pendidikan from "./pages/about/pendidikan";
 import VisiMisi from "./pages/about/visiMisi";
+import PagesSetting from "./pages/dashboard/pagesSetting";
 import Add from "./pages/dashboard/pagesWork/add";
 import Page_1 from "./pages/dashboard/pagesWork/add/page_1";
-import PagesSetting from "./pages/dashboard/pagesSetting";
 import Page_2 from "./pages/dashboard/pagesWork/add/page_2";
 import Page_3 from "./pages/dashboard/pagesWork/add/page_3";
 import Page_4 from "./pages/dashboard/pagesWork/add/page_4";
+import Edit from "./pages/dashboard/pagesWork/edit";
+import Edit_1 from "./pages/dashboard/pagesWork/edit/edit_1";
+import Edit_2 from "./pages/dashboard/pagesWork/edit/edit_2";
+import Edit_3 from "./pages/dashboard/pagesWork/edit/edit_3";
+import Edit_4 from "./pages/dashboard/pagesWork/edit/edit_4";
+import PagesDukungan from "./pages/dashboard/pagesDukungan";
+import AddRekamJejak from "./pages/dashboard/pagesRekamJejak/add";
 
 function App() {
   return (
@@ -46,12 +54,21 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
-          <Route path="Pengaturan" element={<PagesSetting />} />
+          <Route path="dukungan" element={<PagesDukungan />} />
+          <Route path="tentangsaya" element={<PagesRekamJejak />} />
+          <Route path="pengaturan" element={<PagesSetting />} />
           <Route path="Add Program Kerja" element={<Add />}>
             <Route index element={<Page_1 />} />
             <Route path="Page 2" element={<Page_2 />} />
             <Route path="Page 3" element={<Page_3 />} />
             <Route path="Page 4" element={<Page_4 />} />
+          </Route>
+          <Route path="Add Rekam Jejak" element={<AddRekamJejak />} />
+          <Route path="Edit Program Kerja" element={<Edit />}>
+            <Route index element={<Edit_1 />} />
+            <Route path="Edit 2" element={<Edit_2 />} />
+            <Route path="Edit 3" element={<Edit_3 />} />
+            <Route path="Edit 4" element={<Edit_4 />} />
           </Route>
         </Route>
         <Route path="/digitalisasi" element={<Digitalisasi />} />
